@@ -1,7 +1,9 @@
 package com.goodee.hello;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -34,7 +36,8 @@ public class FileReadTestCase {
 
 	@Test
 	public void 파일읽기테스트() throws IOException {
-		
+		BufferedReader br = new BufferedReader(reader);
+		assertEquals("hello", br.readLine());
 	}
 
 }
